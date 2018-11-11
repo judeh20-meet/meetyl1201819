@@ -1,3 +1,5 @@
+
+'''
 class Animal(object):
 	
 	def __init__(self, sound, name, age, favourite_color):
@@ -15,3 +17,23 @@ dog = Animal("Bork", "Doggy", "2", "gray")
 dog.eat("meat")
 dog.description()
 dog.make_sound(6)
+'''
+
+class Person(object):
+
+	def __init__(self, name, age, city, gender):
+		self.name = name
+		self.age = age
+		self.city = city
+		self.gender = gender
+	def eat_breakfast(self,food):
+		print(self.name + " is eating his favourite breakfast!" + food)
+	def visit_parent(self,parent):
+		print(self.name + " went to visit his dad, " + parent + "!")
+
+person1 = Person("Bob", 27, "Moscow", "male")
+person1.eat_breakfast(" Green eggs and ham!")
+person2 = Person("Jimmy", 27, "Egypt", "male")
+person2.eat_breakfast(" Corn flakes!")
+person1.visit_parent("Jimmy")
+person2.visit_parent("Henry")

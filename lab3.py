@@ -1,26 +1,43 @@
 import turtle
 
+turtle.addshape("Emoji.gif")
+turtle.shape("Emoji.gif")
+angle1 = 1
+turtle.speed(0)
+
+
+
+for i in range(100000):
+	turtle.right(angle1)
+	turtle.forward(300)
+	turtle.right(35)
+	turtle.forward(100)
+	turtle.right(90)
+	turtle.forward(40)
+	angle1 = angle1 + 1
+	turtle.penup()
+	turtle.home()
+	turtle.pendown()
 
 
 
 
 
-'''
-def square():
-	for i in range(4):
-		turtle.forward(100)
-		turtle.right(90)
-turtle.begin_fill()
-square()
-turtle.end_fill()
 
-turtle.begin_fill()
-turtle.right(90)
-turtle.forward(100)
-turtle.left(45)
-turtle.forward(70)
-turtle.left(90)
-turtle.forward(70)
-turtle.hideturtle()
-turtle.end_fill()
-'''
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+turtle.mainloop()

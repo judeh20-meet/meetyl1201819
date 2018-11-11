@@ -13,15 +13,15 @@ number2 = number1//2
 print(number2)
 '''
 
-'''
-list1 = [1,2,3]
+
+list1 = [1,5,10]
 sum = 0
 for number in list1:
 	print(number)
 	print(number * 2)
 	sum = sum + number
 print(sum)
-'''
+
 
 '''
 turtle.goto(100,100)

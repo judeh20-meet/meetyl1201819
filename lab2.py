@@ -23,8 +23,8 @@ print(b)
 
 
 '''
-a = [1,1,2,3,5,8,13,21,34,55,89,7,21,10,]
-b = [1,2,3,4,5,6,7,8,9,10,11,12,13,89]
+a = [1,2,3,4,5]
+b = [1,1,1,1]
 
 
 def c():
@@ -40,16 +40,15 @@ print(c())
 
 
 
-'''
+
 print("Welcome! I am the prime number magician!")
 number = simpledialog.askstring("HI", "Tell me a number and i will tell you if it is Prime or not", parent=tk.Tk().withdraw())
 
 for i in range(1):
-	if int(number) == 2:
+	if int(number) == 2 or -2:
 		print("Your number is Prime") 
 		quit()
 	if int(number) % 2 == 0:
 		print("Your number is not Prime!")
 	else:
 		print("Your number is Prime") 
-'''
