@@ -1,5 +1,5 @@
 
-'''
+
 class Animal(object):
 	
 	def __init__(self, sound, name, age, favourite_color):
@@ -17,7 +17,8 @@ dog = Animal("Bork", "Doggy", "2", "gray")
 dog.eat("meat")
 dog.description()
 dog.make_sound(6)
-'''
+
+
 
 class Person(object):
 
