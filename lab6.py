@@ -21,7 +21,13 @@ Jimmy = Square(10)
 Jimmy.random_color()
 turtle.mainloop()
 
+
+
+
+
+
 class Hexagon(Turtle):	
 	def __init__(self, size):
 		Turtle.__init__(self)
+
 
