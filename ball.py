@@ -5,6 +5,7 @@ from turtle import *
 class Ball(Turtle):
 	def __init__(self, x, y, dx ,dy, r, color):
 		Turtle.__init__(self)
+		self.speed(0)
 		self.penup()
 		self.dx = dx
 		self.dy = dy
@@ -27,9 +28,20 @@ class Ball(Turtle):
 
 		self.goto(new_x, new_y)
 
-		if top_side > SCREEN_HEIGHT or bottom_side < -SCREEN_HEIGHT:
+		if top_side > SCREEN_HEIGHT: 
+			self.goto(self.xcor(),self.ycor() - 1)
 			self.dy *= -1
-		if left_side < -SCREEN_WIDTH or right_side > SCREEN_WIDTH:
+		
+		if bottom_side < -SCREEN_HEIGHT:
+			self.goto(self.xcor(),self.ycor() + 1)
+			self.dy *= -1
+		
+		if left_side < -SCREEN_WIDTH:
+			self.goto(self.xcor() + 1,self.ycor())
+			self.dx *= -1
+		
+		if right_side > SCREEN_WIDTH:
+			self.goto(self.xcor() - 1,self.ycor())
 			self.dx *= -1
 
 
