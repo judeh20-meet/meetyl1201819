@@ -10,16 +10,18 @@ import time
 def game():
 	screen = turtle.Screen()
 	screen.title("Judeh's benevolent game")
+	turtle.bgpic("bg_pic2.gif")
 	def game_mode1():
 		#variables
 		turtle.tracer(0,0)
 		turtle.hideturtle()
+		turtle.bgpic("bg_pic4.gif")
 		RUNNING = True
 		SLEEP = 0.0077  
 		SCREEN_WIDTH = turtle.getcanvas() . winfo_width()/2
 		SCREEN_HEIGHT = turtle.getcanvas() . winfo_height()/2
 		player = Ball(0, 0, 25, 25, 15, "blue")
-		NUMBER_OF_BALLS = 30
+		NUMBER_OF_BALLS = 25
 		MINIMUM_BALL_RADIUS = 5
 		MAXIMUM_BALL_RADIUS = 25
 		MINIMUM_BALL_DX = -3
@@ -32,6 +34,8 @@ def game():
 		timer.hideturtle()
 		timer.penup()
 		timer.goto(0,300)
+		global score
+		score = 0
 		
 		#creating the circles
 		for i in range(NUMBER_OF_BALLS):
@@ -109,9 +113,11 @@ def game():
 
 							
 
-
+		points2 = turtle.Turtle()
+		points2.hideturtle()
+		points2.penup()
 		def myball_collision():
-				
+				global score
 				for ball_a in BALLS:
 					collide(ball_a, player)
 					if collide(ball_a, player) == True:
@@ -137,6 +143,18 @@ def game():
 								ball_a.r = r
 								player.shapesize(player.r/10)
 								ball_a.shapesize(ball_a.r/10)
+								
+								points2.goto(0,300)
+								score += 1
+								points2.clear()
+								points2.write(str("Your score is : " + str(score)), move = True, align = "center", font = ("Arial", 20, "normal"))
+
+
+
+
+
+
+
 								return True
 
 
@@ -169,7 +187,7 @@ def game():
 	def game_mode2():
 		#variables
 		turtle.tracer(0,0)
-		turtle.hideturtle()
+		turtle.hideturtle()		
 		RUNNING = True
 		SLEEP = 0.0077  
 		SCREEN_WIDTH = turtle.getcanvas() . winfo_width()/2
@@ -183,6 +201,7 @@ def game():
 		MINIMUM_BALL_DY = -3
 		MAXIMUM_BALL_DY = 3
 		BALLS = []
+		turtle.bgpic("index2.gif")
 		points = 3
 		timer = turtle.Turtle()
 		timer.hideturtle()
@@ -236,12 +255,12 @@ def game():
 
 
 		def myball_collision():
-				
 				for ball_a in BALLS:
 					collide(ball_a, player)
 					if collide(ball_a, player) == True:
 						if ball_a.r > player.r or  ball_a.r < player.r:
 							quit()
+
 						
 						
 
