@@ -18,8 +18,8 @@ def game():
 		turtle.bgpic("bg_pic4.gif")
 		RUNNING = True
 		SLEEP = 0.0077  
-		SCREEN_WIDTH = turtle.getcanvas() . winfo_width()/2
-		SCREEN_HEIGHT = turtle.getcanvas() . winfo_height()/2
+		SCREEN_WIDTH = turtle.getcanvas() . winfo_width()//2
+		SCREEN_HEIGHT = turtle.getcanvas() . winfo_height()//2
 		player = Ball(0, 0, 25, 25, 15, "blue")
 		NUMBER_OF_BALLS = 25
 		MINIMUM_BALL_RADIUS = 5
@@ -190,8 +190,8 @@ def game():
 		turtle.hideturtle()		
 		RUNNING = True
 		SLEEP = 0.0077  
-		SCREEN_WIDTH = turtle.getcanvas() . winfo_width()/2
-		SCREEN_HEIGHT = turtle.getcanvas() . winfo_height()/2
+		SCREEN_WIDTH = turtle.getcanvas() . winfo_width()//2
+		SCREEN_HEIGHT = turtle.getcanvas() . winfo_height()//2
 		player = Ball(0, 0, 25, 25, 15, "blue")
 		NUMBER_OF_BALLS = 40
 		MINIMUM_BALL_RADIUS = 5
